@@ -29,7 +29,7 @@ class Classifiers(object):
 
     def create_pipelines(self, mapper):
 
-        for i, classifier in enumerate(self.classifiers):
+        for classifier in self.classifiers:
             self.pipelines.append(Pipeline([
                 ('featurize', mapper),
                 ('classifier', classifier[2])
